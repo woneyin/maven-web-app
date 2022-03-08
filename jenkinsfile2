@@ -14,11 +14,11 @@ sh "${mavenHome}/bin/mvn package"
 
 stage('3. CodeQuality') 
 {
-//sh "${mavenHome}/bin/mvn sonar:sonar"
+sh "${mavenHome}/bin/mvn sonar:sonar"
 }
 stage('4.UploadNexus') 
 {
-//sh "${mavenHome}/bin/mvn deploy"
+sh "${mavenHome}/bin/mvn deploy"
 }
 stage('5. Approval') 
 {
